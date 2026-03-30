@@ -32,7 +32,7 @@ export const SERVICES = [
       "Personalized scalp care",
       "Fully customized",
     ],
-    badge: null,
+    badge: "Most Experience",
   },
   {
     name: "Hi Lite Royal",

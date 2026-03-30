@@ -81,7 +81,7 @@ export default function Promotions() {
       </section>
 
       <BookingCTA
-        headline="Do Not Miss Out"
+        headline="It's Time to Unwind"
         subtext="These offers will not last forever. Treat yourself to the relaxation you deserve."
       />
     </div>
