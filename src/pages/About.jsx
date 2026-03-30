@@ -53,6 +53,9 @@ export default function About() {
               <p>
                 Located in the heart of Anaheim, our spa blends modern techniques with time-honored traditions to deliver an experience unlike any other. We use premium products, personalized care, and a gentle, unhurried approach that honors your need for rest.
               </p>
+              <p>
+                Conveniently located just 10 minutes from Disneyland, Hi-Lite Head Spa Anaheim offers a peaceful place to relax and recharge after a long day of walking, crowds, and excitement.
+              </p>
             </div>
           </motion.div>
           <motion.div

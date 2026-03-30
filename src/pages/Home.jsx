@@ -91,6 +91,16 @@ function Hero() {
   );
 }
 
+function DisneylandNote() {
+  return (
+    <div className="py-8 px-4 bg-card border-b border-border text-center">
+      <p className="font-body text-sm text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+        Conveniently located just 10 minutes from Disneyland, Hi-Lite Head Spa Anaheim offers a peaceful place to relax and recharge after a long day of walking, crowds, and excitement.
+      </p>
+    </div>
+  );
+}
+
 function ProblemSection() {
   const problems = [
     { icon: Brain, text: "Stress and fatigue" },
@@ -260,6 +270,7 @@ export default function Home() {
   return (
     <div>
       <Hero />
+      <DisneylandNote />
       <ProblemSection />
       <BenefitsSection />
       <FeaturedServices />
