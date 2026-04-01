@@ -8,7 +8,7 @@ export const IMAGES = {
   interior: "https://media.base44.com/images/public/user_6946325409b1232840422c0d/dfd3f2bb1_IMG_4589-ThiNguyen.jpg",
 };
 
-export const BOOKING_URL = "https://www.hiliteheadspa.com";
+export const BOOKING_URL = "https://app.squareup.com/appointments/book/ziaxhgo8sj2etm/LKNG1X7QRRQ4M/start";
 
 export const BUSINESS = {
   name: "HI-LITE HEAD SPA",
