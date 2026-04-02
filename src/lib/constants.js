@@ -1,5 +1,5 @@
 export const IMAGES = {
-  hero: "https://media.base44.com/images/public/user_6946325409b1232840422c0d/70a537646_IMG_4176-ThiNguyen.jpeg",
+  hero: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/28df4d375_generated_image.png",
   treatment1: "https://media.base44.com/images/public/user_6946325409b1232840422c0d/a0d703ae9_IMG_4111-ThiNguyen.jpg",
   treatment2: "https://media.base44.com/images/public/user_6946325409b1232840422c0d/4fe6da2a3_IMG_4177-ThiNguyen.jpeg",
   massage: "https://media.base44.com/images/public/user_6946325409b1232840422c0d/71d11e578_IMG_4179-ThiNguyen.jpg",
