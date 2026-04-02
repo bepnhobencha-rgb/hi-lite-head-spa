@@ -2,41 +2,42 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { BUSINESS, BOOKING_URL } from "@/lib/constants";
+import { useLang } from "@/lib/LanguageContext";
+import t from "@/lib/translations";
 
 export default function Footer() {
+  const { lang } = useLang();
+  const tx = t[lang].nav;
+  const cta = t[lang].cta;
+
+  const links = [
+    { label: tx.services, path: "/services" },
+    { label: tx.promotions, path: "/promotions" },
+    { label: tx.gallery, path: "/gallery" },
+    { label: tx.about, path: "/about" },
+    { label: tx.giftCards, path: "/gift-cards" },
+  ];
+
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14">
           {/* Brand */}
           <div>
-            <h3 className="font-heading text-2xl font-semibold tracking-wider mb-3">
-              {BUSINESS.name}
-            </h3>
+            <h3 className="font-heading text-2xl font-semibold tracking-wider mb-3">{BUSINESS.name}</h3>
             <div className="w-8 h-px bg-gold mb-4" />
-            <p className="font-body text-sm text-primary-foreground/70 italic">
-              {BUSINESS.slogan}
-            </p>
+            <p className="font-body text-sm text-primary-foreground/70 italic">{BUSINESS.slogan}</p>
           </div>
 
           {/* Quick Links */}
           <div>
             <h4 className="font-heading text-lg font-medium mb-5 tracking-wide">
-              Explore
+              {lang === "en" ? "Explore" : "Explorar"}
             </h4>
             <div className="space-y-3 font-body text-sm">
-              {[
-                { label: "Services", path: "/services" },
-                { label: "Promotions", path: "/promotions" },
-                { label: "Gallery", path: "/gallery" },
-                { label: "About", path: "/about" },
-                { label: "Gift Cards", path: "/gift-cards" },
-              ].map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className="block text-primary-foreground/70 hover:text-primary-foreground transition-colors"
-                >
+              {links.map((link) => (
+                <Link key={link.path} to={link.path}
+                  className="block text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                   {link.label}
                 </Link>
               ))}
@@ -46,7 +47,7 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h4 className="font-heading text-lg font-medium mb-5 tracking-wide">
-              Contact
+              {lang === "en" ? "Contact" : "Contacto"}
             </h4>
             <div className="space-y-4 font-body text-sm text-primary-foreground/70">
               <div className="flex items-start gap-3">
@@ -55,15 +56,11 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={16} className="shrink-0 text-gold" />
-                <a href={`tel:${BUSINESS.phone}`} className="hover:text-primary-foreground transition-colors">
-                  {BUSINESS.phone}
-                </a>
+                <a href={`tel:${BUSINESS.phone}`} className="hover:text-primary-foreground transition-colors">{BUSINESS.phone}</a>
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={16} className="shrink-0 text-gold" />
-                <a href={`mailto:${BUSINESS.email}`} className="hover:text-primary-foreground transition-colors">
-                  {BUSINESS.email}
-                </a>
+                <a href={`mailto:${BUSINESS.email}`} className="hover:text-primary-foreground transition-colors">{BUSINESS.email}</a>
               </div>
               <div className="flex items-center gap-3">
                 <Clock size={16} className="shrink-0 text-gold" />
@@ -75,25 +72,21 @@ export default function Footer() {
           {/* CTA */}
           <div>
             <h4 className="font-heading text-lg font-medium mb-5 tracking-wide">
-              Ready to Relax?
+              {lang === "en" ? "Ready to Relax?" : "¿Listo para Relajarte?"}
             </h4>
             <p className="font-body text-sm text-primary-foreground/70 mb-6">
-              Book your luxury head spa experience today.
+              {lang === "en" ? "Book your luxury head spa experience today." : "Reserva tu experiencia de lujo hoy."}
             </p>
-            <a
-              href={BOOKING_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-8 py-3.5 bg-primary-foreground text-primary text-sm font-body font-medium tracking-wider rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:opacity-95 transition-all duration-300"
-            >
-              Book Now
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer"
+              className="inline-block px-8 py-3.5 bg-primary-foreground text-primary text-sm font-body font-medium tracking-wider rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:opacity-95 transition-all duration-300">
+              {tx.bookNow}
             </a>
           </div>
         </div>
 
         <div className="mt-20 pt-8 border-t border-primary-foreground/20 text-center">
           <p className="font-body text-xs text-primary-foreground/50 tracking-wide">
-            © {new Date().getFullYear()} {BUSINESS.fullName}. All rights reserved.
+            © {new Date().getFullYear()} {BUSINESS.fullName}. {lang === "en" ? "All rights reserved." : "Todos los derechos reservados."}
           </p>
         </div>
       </div>

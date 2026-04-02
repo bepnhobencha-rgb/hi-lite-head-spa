@@ -3,23 +3,27 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { BOOKING_URL, BUSINESS } from "@/lib/constants";
 import { motion, AnimatePresence } from "framer-motion";
-
-const NAV_LINKS = [
-  { label: "Home", path: "/" },
-  { label: "Services", path: "/services" },
-  { label: "Promotions", path: "/promotions" },
-  { label: "Gallery", path: "/gallery" },
-  { label: "About", path: "/about" },
-  { label: "Reviews", path: "/reviews" },
-  { label: "FAQ", path: "/faq" },
-  { label: "Contact", path: "/contact" },
-  { label: "Gift Cards", path: "/gift-cards" },
-];
+import { useLang } from "@/lib/LanguageContext";
+import t from "@/lib/translations";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const { lang, toggle } = useLang();
+  const tx = t[lang].nav;
+
+  const NAV_LINKS = [
+    { label: tx.home, path: "/" },
+    { label: tx.services, path: "/services" },
+    { label: tx.promotions, path: "/promotions" },
+    { label: tx.gallery, path: "/gallery" },
+    { label: tx.about, path: "/about" },
+    { label: tx.reviews, path: "/reviews" },
+    { label: tx.faq, path: "/faq" },
+    { label: tx.contact, path: "/contact" },
+    { label: tx.giftCards, path: "/gift-cards" },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -62,24 +66,40 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            {/* Language Toggle */}
+            <button
+              onClick={toggle}
+              className="ml-2 px-3 py-2 text-sm font-body tracking-wide text-muted-foreground hover:text-foreground transition-colors border border-border rounded-full"
+              title={lang === "en" ? "Cambiar a Español" : "Switch to English"}
+            >
+              {lang === "en" ? "🇲🇽 ES" : "🇺🇸 EN"}
+            </button>
             <a
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="ml-4 px-7 py-2.5 bg-foreground text-background text-sm font-body font-medium tracking-wider rounded-full hover:shadow-[0_0_16px_rgba(0,0,0,0.2)] hover:opacity-85 transition-all duration-300"
             >
-              Book Now
+              {tx.bookNow}
             </a>
           </nav>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setOpen(!open)}
-            className="lg:hidden p-2 text-foreground"
-            aria-label="Toggle menu"
-          >
-            {open ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="lg:hidden flex items-center gap-3">
+            <button
+              onClick={toggle}
+              className="px-3 py-1.5 text-xs font-body text-muted-foreground hover:text-foreground border border-border rounded-full transition-colors"
+            >
+              {lang === "en" ? "🇲🇽 ES" : "🇺🇸 EN"}
+            </button>
+            <button
+              onClick={() => setOpen(!open)}
+              className="p-2 text-foreground"
+              aria-label="Toggle menu"
+            >
+              {open ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -112,7 +132,7 @@ export default function Navbar() {
                 rel="noopener noreferrer"
                 className="mt-5 w-full py-3.5 bg-foreground text-background text-center text-sm font-body font-medium tracking-wider rounded-full hover:opacity-85 transition-all duration-300"
               >
-                Book Now
+                {tx.bookNow}
               </a>
             </nav>
           </motion.div>
