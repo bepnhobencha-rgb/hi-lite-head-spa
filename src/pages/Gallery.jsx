@@ -13,7 +13,6 @@ const galleryImages = [
   { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/10d135a57_Unknown-52.jpg", alt: "Hi-Lite Head Spa reception", category: "interior" },
   { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/c3abb9392_Unknown-60.jpg", alt: "Hi-Lite Head Spa waiting area", category: "interior" },
   { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/b2e81a3ca_Unknown-49.jpg", alt: "Hi-Lite Head Spa reception desk", category: "interior" },
-  { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/cdf1d7461_Unknown-61.jpg", alt: "Hi-Lite Head Spa logo sign", category: "interior" },
   { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/922f18a09_Unknown-46.jpg", alt: "Head spa scalp treatment", category: "treatment" },
   { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/1a0637449_Unknown-63.jpg", alt: "Head spa wash treatment", category: "treatment" },
   { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/962e5e8ef_Unknown-64.jpg", alt: "Relaxing massage treatment", category: "treatment" },
