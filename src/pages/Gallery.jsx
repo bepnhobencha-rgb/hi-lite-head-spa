@@ -20,7 +20,6 @@ const galleryImages = [
   { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/d1e0457e5_Unknown-38.jpg", alt: "Men head spa treatment", category: "treatment" },
   { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/95c23eefd_Unknown-39.jpg", alt: "Hi-Lite Head Spa clients", category: "treatment" },
   { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/2f666c9d2_Unknown-56.jpg", alt: "Beautiful hair result", category: "results" },
-  { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/e692990c5_Unknown-57.jpg", alt: "Curly hair treatment", category: "results" },
   { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/6fdd3ceca_Unknown-31.jpg", alt: "Hi-Lite spa treatment room", category: "interior" },
   { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/f5c13294c_Unknown-32.jpg", alt: "Hi-Lite hair salon area", category: "interior" },
   { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/2e7ba2778_Unknown-29.jpg", alt: "Hi-Lite team anniversary", category: "team" },
