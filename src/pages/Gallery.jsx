@@ -8,13 +8,23 @@ import { useLang } from "@/lib/LanguageContext";
 import t from "@/lib/translations";
 
 const galleryImages = [
-  { src: IMAGES.interior, alt: "HI-LITE HEAD SPA interior" },
-  { src: IMAGES.hero, alt: "Luxury scalp treatment" },
-  { src: IMAGES.treatment1, alt: "Head spa wash treatment" },
-  { src: IMAGES.treatment2, alt: "Relaxing scalp therapy" },
-  { src: IMAGES.massage, alt: "Spa massage therapy" },
-  { src: IMAGES.scalp, alt: "Scalp massage close-up" },
-  { src: IMAGES.facial, alt: "Facial and head treatment" },
+  // Interior & Space
+  { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/e4325b2c5_Unknown-37.jpg", alt: "HI-LITE HEAD SPA treatment room", filter: "brightness(1.05) contrast(1.05) saturate(0.85)" },
+  { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/d1e0457e5_Unknown-38.jpg", alt: "HI-LITE HEAD SPA reception area", filter: "brightness(1.08) contrast(1.04) saturate(0.82)" },
+  { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/95c23eefd_Unknown-39.jpg", alt: "HI-LITE HEAD SPA lobby", filter: "brightness(1.06) contrast(1.03) saturate(0.85)" },
+  { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/6be749dae_Unknown-48.jpg", alt: "HI-LITE HEAD SPA entrance", filter: "brightness(1.08) contrast(1.04) saturate(0.80)" },
+  // Treatments
+  { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/922f18a09_Unknown-46.jpg", alt: "Scalp spa treatment with ring tool", filter: "brightness(1.12) contrast(1.08) saturate(0.80) sepia(0.08)" },
+  { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/1a0637449_Unknown-63.jpg", alt: "Head spa wash treatment", filter: "brightness(1.06) contrast(1.06) saturate(0.88) sepia(0.05)" },
+  { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/962e5e8ef_Unknown-64.jpg", alt: "Relaxing massage therapy", filter: "brightness(1.05) contrast(1.05) saturate(0.82) sepia(0.08)" },
+  { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/10d135a57_Unknown-52.jpg", alt: "Shiny long hair treatment result", filter: "brightness(1.10) contrast(1.06) saturate(0.78)" },
+  { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/2f666c9d2_Unknown-56.jpg", alt: "Curly hair scalp treatment", filter: "brightness(1.15) contrast(1.10) saturate(0.70) sepia(0.10)" },
+  { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/e692990c5_Unknown-57.jpg", alt: "Men's scalp cleansing treatment", filter: "brightness(1.10) contrast(1.08) saturate(0.80) sepia(0.06)" },
+  { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/f5c13294c_Unknown-32.jpg", alt: "LED scalp treatment session", filter: "brightness(1.12) contrast(1.08) saturate(0.72) sepia(0.10)" },
+  // Team
+  { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/2e7ba2778_Unknown-29.jpg", alt: "HI-LITE HEAD SPA team – Anniversary", filter: "brightness(1.06) contrast(1.05) saturate(0.82)" },
+  { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/69d7f95f7_Unknown-30.jpg", alt: "HI-LITE HEAD SPA team portrait", filter: "brightness(1.06) contrast(1.05) saturate(0.82)" },
+  { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/6fdd3ceca_Unknown-31.jpg", alt: "HI-LITE HEAD SPA staff reception", filter: "brightness(1.08) contrast(1.04) saturate(0.83)" },
 ];
 
 export default function Gallery() {
@@ -53,7 +63,7 @@ export default function Gallery() {
                 className="cursor-pointer overflow-hidden rounded-sm aspect-[4/3]"
                 onClick={() => setSelected(img)}
               >
-                <img src={img.src} alt={img.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                <img src={img.src} alt={img.alt} style={{ filter: img.filter }} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
               </motion.div>
             ))}
           </div>
@@ -79,6 +89,7 @@ export default function Gallery() {
               exit={{ scale: 0.9, opacity: 0 }}
               src={selected.src}
               alt={selected.alt}
+              style={{ filter: selected.filter }}
               className="max-w-full max-h-[85vh] object-contain rounded-sm"
               onClick={(e) => e.stopPropagation()}
             />
