@@ -41,7 +41,7 @@ export default function GiftCards() {
               className="bg-card border border-border rounded-sm p-12 text-center">
               <h3 className="font-heading text-2xl font-medium text-foreground mb-4">{tx.onlineTitle}</h3>
               <p className="font-body text-sm text-muted-foreground leading-relaxed mb-10">{tx.onlineText}</p>
-              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer"
+              <a href="https://app.squareup.com/gift/MLS550QW7H88Y/order" target="_blank" rel="noopener noreferrer"
                 className="inline-block px-10 py-3.5 bg-foreground text-background text-sm font-body font-medium tracking-widest rounded-full hover:shadow-[0_0_18px_rgba(0,0,0,0.2)] hover:opacity-85 transition-all duration-300">
                 {tx.buyNow}
               </a>
