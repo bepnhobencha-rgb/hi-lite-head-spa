@@ -21,7 +21,7 @@ export default function Services() {
   return (
     <div>
       <section className="relative h-80 md:h-[520px] flex items-end overflow-hidden">
-        <img src="https://media.base44.com/images/public/69ca33f058b56f86689a61f3/962e5e8ef_Unknown-64.jpg" alt="Head spa treatment" className="absolute inset-0 w-full h-full object-cover object-center" />
+        <img src={IMAGES.facial} alt="Head spa treatment" className="absolute inset-0 w-full h-full object-cover object-top" style={{ imageRendering: "auto" }} />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 w-full">
           <p className="font-body text-xs tracking-[0.35em] uppercase text-gold mb-3">{tx.eyebrow}</p>
