@@ -28,7 +28,7 @@ export default function Contact() {
   return (
     <div>
       <section className="relative h-80 md:h-[520px] flex items-end overflow-hidden">
-        <img src={IMAGES.massage} alt="HI-LITE HEAD SPA contact" className="absolute inset-0 w-full h-full object-cover object-center" style={{ filter: "brightness(1.05) contrast(1.04) saturate(0.82) sepia(0.08)" }} />
+        <img src="https://media.base44.com/images/public/69ca33f058b56f86689a61f3/18007a3c3_Gemini_Generated_Image_529tot529tot529t.png" alt="HI-LITE HEAD SPA contact" className="absolute inset-0 w-full h-full object-cover object-center" style={{ filter: "brightness(1.05) contrast(1.04) saturate(0.82) sepia(0.08)" }} />
         <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/30 to-black/65" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 w-full">
           <p className="font-body text-xs tracking-[0.35em] uppercase text-gold mb-3">{tx.eyebrow}</p>
