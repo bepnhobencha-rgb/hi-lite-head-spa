@@ -23,8 +23,8 @@ export default function Booking() {
 
   return (
     <div>
-      <section className="relative h-80 md:h-[420px] flex items-end overflow-hidden">
-        <img src={IMAGES.hero} alt="Book your head spa" className="absolute inset-0 w-full h-full object-cover" />
+      <section className="relative h-80 md:h-[520px] flex items-end overflow-hidden">
+        <img src={IMAGES.hero} alt="Book your head spa" className="absolute inset-0 w-full h-full object-cover object-center" style={{ imageRendering: "auto" }} />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 w-full">
           <p className="font-body text-xs tracking-[0.35em] uppercase text-gold mb-3">{tx.eyebrow}</p>

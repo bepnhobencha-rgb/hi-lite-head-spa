@@ -18,7 +18,7 @@ export default function GiftCards() {
 
   return (
     <div>
-      <section className="relative h-80 md:h-[420px] flex items-end overflow-hidden">
+      <section className="relative h-80 md:h-[520px] flex items-end overflow-hidden">
         <img src="https://media.base44.com/images/public/69ca33f058b56f86689a61f3/64ff89344_Unknown-62.jpg" alt="Gift card for head spa" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(1.08) contrast(1.05) saturate(0.88) sepia(0.05)" }} />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 w-full">
