@@ -21,6 +21,7 @@ const galleryImages = [
   { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/2f666c9d2_Unknown-56.jpg", alt: "Curly hair scalp treatment", filter: "brightness(1.15) contrast(1.10) saturate(0.70) sepia(0.10)" },
   { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/e692990c5_Unknown-57.jpg", alt: "Men's scalp cleansing treatment", filter: "brightness(1.10) contrast(1.08) saturate(0.80) sepia(0.06)" },
   { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/f5c13294c_Unknown-32.jpg", alt: "LED scalp treatment session", filter: "brightness(1.12) contrast(1.08) saturate(0.72) sepia(0.10)" },
+  { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/227e6e111_Gemini_Generated_Image_qs7xblqs7xblqs7x.png", alt: "Luxury head spa scalp massage treatment", filter: "brightness(1.05) contrast(1.05) saturate(0.90)" },
   // Team
   { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/2e7ba2778_Unknown-29.jpg", alt: "HI-LITE HEAD SPA team – Anniversary", filter: "brightness(1.06) contrast(1.05) saturate(0.82)" },
   { src: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/69d7f95f7_Unknown-30.jpg", alt: "HI-LITE HEAD SPA team portrait", filter: "brightness(1.06) contrast(1.05) saturate(0.82)" },
