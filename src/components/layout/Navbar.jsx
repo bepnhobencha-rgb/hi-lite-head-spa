@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import { BOOKING_URL, BUSINESS } from "@/lib/constants";
+import { BOOKING_URL, BUSINESS, SOCIAL } from "@/lib/constants";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLang } from "@/lib/LanguageContext";
 import t from "@/lib/translations";
@@ -66,10 +66,27 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            {/* Social Icons */}
+            <div className="flex items-center gap-3 ml-2 mr-1 border-l border-border pl-4">
+              <a href={SOCIAL.instagram} target="_blank" rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+                title="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+              </a>
+              <a href={SOCIAL.tiktok} target="_blank" rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+                title="TikTok">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.74a4.85 4.85 0 0 1-1.01-.05z"/>
+                </svg>
+              </a>
+            </div>
             {/* Language Toggle */}
             <button
               onClick={toggle}
-              className="ml-2 px-3 py-2 text-sm font-body tracking-wide text-muted-foreground hover:text-foreground transition-colors border border-border rounded-full"
+              className="px-3 py-2 text-sm font-body tracking-wide text-muted-foreground hover:text-foreground transition-colors border border-border rounded-full"
               title={lang === "en" ? "Cambiar a Español" : "Switch to English"}
             >
               {lang === "en" ? "🇲🇽 ES" : "🇺🇸 EN"}
@@ -126,11 +143,27 @@ export default function Navbar() {
                   {link.label}
                 </Link>
               ))}
+              <div className="flex gap-3 pt-4">
+                <a href={SOCIAL.instagram} target="_blank" rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 border border-border rounded-full text-sm font-body text-muted-foreground hover:text-foreground transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                  </svg>
+                  Instagram
+                </a>
+                <a href={SOCIAL.tiktok} target="_blank" rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 border border-border rounded-full text-sm font-body text-muted-foreground hover:text-foreground transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.74a4.85 4.85 0 0 1-1.01-.05z"/>
+                  </svg>
+                  TikTok
+                </a>
+              </div>
               <a
                 href={BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-5 w-full py-3.5 bg-foreground text-background text-center text-sm font-body font-medium tracking-wider rounded-full hover:opacity-85 transition-all duration-300"
+                className="mt-4 w-full py-3.5 bg-foreground text-background text-center text-sm font-body font-medium tracking-wider rounded-full hover:opacity-85 transition-all duration-300"
               >
                 {tx.bookNow}
               </a>
