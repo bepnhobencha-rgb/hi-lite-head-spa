@@ -74,7 +74,14 @@ export default function Footer() {
             <h4 className="font-heading text-lg font-medium mb-5 tracking-wide">
               {lang === "en" ? "Follow Us" : "Síguenos"}
             </h4>
-            <div className="flex gap-4 mb-8">
+            <div className="flex flex-wrap gap-3 mb-8">
+              <a href="https://www.facebook.com/HiLiteHairSalon?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"
+                className="flex items-center gap-2.5 px-4 py-2.5 border border-primary-foreground/25 rounded-full text-primary-foreground/70 hover:text-primary-foreground hover:border-primary-foreground/60 transition-all duration-300 font-body text-xs tracking-widest uppercase">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+                </svg>
+                Facebook
+              </a>
               <a href={SOCIAL.instagram} target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-2.5 px-4 py-2.5 border border-primary-foreground/25 rounded-full text-primary-foreground/70 hover:text-primary-foreground hover:border-primary-foreground/60 transition-all duration-300 font-body text-xs tracking-widest uppercase">
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
