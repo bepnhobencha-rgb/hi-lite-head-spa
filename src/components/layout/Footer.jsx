@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
-import { BUSINESS, BOOKING_URL } from "@/lib/constants";
+import { BUSINESS, BOOKING_URL, SOCIAL } from "@/lib/constants";
 import { useLang } from "@/lib/LanguageContext";
 import t from "@/lib/translations";
 
