@@ -30,7 +30,7 @@ export const SERVICES = [
     name: "Hi Lite VVIP",
     duration: "110 mins",
     price: 195,
-    image: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/722ce94df_generated_image.png",
+    image: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/5cf995b54_generated_image.png",
     features: [
       "Full VIP scalp relaxation ritual",
       "Extended herbal & hot stone therapy",
@@ -44,7 +44,7 @@ export const SERVICES = [
     name: "Hi Lite Royal",
     duration: "90 mins",
     price: 155,
-    image: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/5d8158956_generated_image.png",
+    image: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/e032e72d5_generated_image.png",
     features: [
       "Full scalp massage",
       "Herbal & hot stone",
@@ -58,7 +58,7 @@ export const SERVICES = [
     name: "Hi Lite Deluxe",
     duration: "80 mins",
     price: 125,
-    image: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/2778808f3_generated_image.png",
+    image: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/041c09697_generated_image.png",
     features: [
       "Full scalp massage",
       "Hot oil treatment",
