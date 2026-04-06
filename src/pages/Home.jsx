@@ -134,26 +134,34 @@ function FeaturedServices() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {featured.map((s, i) => (
             <motion.div key={i} {...fadeUp} transition={{ ...fadeUp.transition, delay: i * 0.1 }}
-              className="bg-card border border-border rounded-sm p-10 flex flex-col relative">
+              className="bg-card border border-border rounded-sm flex flex-col relative overflow-hidden">
               {s.badge && (
-                <span className="absolute top-4 right-4 text-xs font-body tracking-wider text-gold-foreground bg-gold px-3 py-1 rounded-full">
+                <span className="absolute top-4 right-4 z-10 text-xs font-body tracking-wider text-gold-foreground bg-gold px-3 py-1 rounded-full">
                   {s.badge}
                 </span>
               )}
-              <h3 className="font-heading text-2xl font-medium text-foreground mb-1">{s.name}</h3>
-              <p className="font-body text-xs text-muted-foreground mb-5">{s.duration}</p>
-              <p className="font-heading text-3xl font-light text-foreground mb-8">${s.price}</p>
-              <ul className="space-y-2.5 mb-10 flex-1">
-                {s.features.map((f, j) => (
-                  <li key={j} className="font-body text-sm text-muted-foreground flex items-start gap-2">
-                    <span className="w-1 h-1 rounded-full bg-gold mt-2 shrink-0" />{f}
-                  </li>
-                ))}
-              </ul>
-              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer"
-                className="text-center py-3.5 bg-foreground text-background text-sm font-body tracking-wider rounded-full hover:shadow-[0_0_18px_rgba(0,0,0,0.2)] hover:opacity-85 transition-all duration-300">
-                {tx.bookNow}
-              </a>
+              {s.image && (
+                <div className="h-52 overflow-hidden shrink-0">
+                  <img src={s.image} alt={s.name} className="w-full h-full object-cover"
+                    style={{ filter: "brightness(0.95) contrast(1.04) saturate(0.88) sepia(0.06)" }} />
+                </div>
+              )}
+              <div className="p-10 flex flex-col flex-1">
+                <h3 className="font-heading text-2xl font-medium text-foreground mb-1">{s.name}</h3>
+                <p className="font-body text-xs text-muted-foreground mb-5">{s.duration}</p>
+                <p className="font-heading text-3xl font-light text-foreground mb-8">${s.price}</p>
+                <ul className="space-y-2.5 mb-10 flex-1">
+                  {s.features.map((f, j) => (
+                    <li key={j} className="font-body text-sm text-muted-foreground flex items-start gap-2">
+                      <span className="w-1 h-1 rounded-full bg-gold mt-2 shrink-0" />{f}
+                    </li>
+                  ))}
+                </ul>
+                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer"
+                  className="text-center py-3.5 bg-foreground text-background text-sm font-body tracking-wider rounded-full hover:shadow-[0_0_18px_rgba(0,0,0,0.2)] hover:opacity-85 transition-all duration-300">
+                  {tx.bookNow}
+                </a>
+              </div>
             </motion.div>
           ))}
         </div>
