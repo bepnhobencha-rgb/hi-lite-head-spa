@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { BOOKING_URL, IMAGES, BUSINESS } from "@/lib/constants";
 import { useLang } from "@/lib/LanguageContext";
 import t from "@/lib/translations";
+import { useBookingModal } from "@/lib/BookingModalContext";
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -14,6 +15,7 @@ const fadeUp = {
 export default function Booking() {
   const { lang } = useLang();
   const tx = t[lang].booking;
+  const { openBookingModal } = useBookingModal();
 
   const steps = [
     { num: "01", title: tx.step1Title, desc: tx.step1Desc },
@@ -46,10 +48,10 @@ export default function Booking() {
           </div>
 
           <motion.div {...fadeUp} transition={{ ...fadeUp.transition, delay: 0.3 }}>
-            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer"
+            <button onClick={openBookingModal}
               className="inline-block px-16 py-4 bg-foreground text-background text-sm font-body font-medium tracking-widest rounded-full hover:shadow-[0_0_22px_rgba(0,0,0,0.2)] hover:opacity-85 transition-all duration-300">
               {tx.bookOnline}
-            </a>
+            </button>
           </motion.div>
         </div>
       </section>

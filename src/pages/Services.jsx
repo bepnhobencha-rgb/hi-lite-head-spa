@@ -5,6 +5,7 @@ import SectionHeader from "@/components/shared/SectionHeader";
 import BookingCTA from "@/components/shared/BookingCTA";
 import { useLang } from "@/lib/LanguageContext";
 import t from "@/lib/translations";
+import { useBookingModal } from "@/lib/BookingModalContext";
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -17,6 +18,7 @@ export default function Services() {
   const { lang } = useLang();
   const tx = t[lang].services;
   const cta = t[lang].cta;
+  const { openBookingModal } = useBookingModal();
 
   return (
     <div>
@@ -66,10 +68,10 @@ export default function Services() {
                   </div>
                   <div className="flex flex-col items-center md:items-end gap-4 md:min-w-[160px]">
                     <p className="font-heading text-4xl font-light text-foreground">${s.price}</p>
-                    <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer"
+                    <button onClick={openBookingModal}
                       className="px-10 py-3 bg-foreground text-background text-sm font-body tracking-wider rounded-full hover:shadow-[0_0_18px_rgba(0,0,0,0.2)] hover:opacity-85 transition-all duration-300">
                       {tx.bookNow}
-                    </a>
+                    </button>
                   </div>
                 </div>
               </motion.div>

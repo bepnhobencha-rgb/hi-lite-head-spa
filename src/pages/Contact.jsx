@@ -5,6 +5,7 @@ import { BUSINESS, BOOKING_URL, IMAGES } from "@/lib/constants";
 import BookingCTA from "@/components/shared/BookingCTA";
 import { useLang } from "@/lib/LanguageContext";
 import t from "@/lib/translations";
+import { useBookingModal } from "@/lib/BookingModalContext";
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -17,6 +18,7 @@ export default function Contact() {
   const { lang } = useLang();
   const tx = t[lang].contact;
   const cta = t[lang].cta;
+  const { openBookingModal } = useBookingModal();
 
   const contactInfo = [
     { icon: MapPin, label: tx.labels.address, value: BUSINESS.address, href: `https://maps.google.com/?q=${encodeURIComponent(BUSINESS.address)}` },
@@ -66,10 +68,10 @@ export default function Contact() {
               ))}
             </div>
             <motion.div {...fadeUp} transition={{ ...fadeUp.transition, delay: 0.4 }} className="mt-12">
-              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer"
+              <button onClick={openBookingModal}
                 className="inline-block px-12 py-4 bg-foreground text-background text-sm font-body font-medium tracking-widest rounded-full hover:shadow-[0_0_20px_rgba(0,0,0,0.2)] hover:opacity-85 transition-all duration-300">
                 {tx.bookNow}
-              </a>
+              </button>
             </motion.div>
           </motion.div>
 

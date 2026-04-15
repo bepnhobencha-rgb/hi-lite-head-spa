@@ -7,6 +7,7 @@ import BookingCTA from "@/components/shared/BookingCTA";
 import { ArrowRight, Sparkles, Droplets, Heart, Brain, Leaf } from "lucide-react";
 import { useLang } from "@/lib/LanguageContext";
 import t from "@/lib/translations";
+import { useBookingModal } from "@/lib/BookingModalContext";
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -18,6 +19,7 @@ const fadeUp = {
 function Hero() {
   const { lang } = useLang();
   const tx = t[lang].home;
+  const { openBookingModal } = useBookingModal();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
@@ -39,10 +41,10 @@ function Hero() {
         </motion.p>
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.1, duration: 0.6 }}
           className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-5">
-          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer"
+          <button onClick={openBookingModal}
             className="px-12 py-4 bg-white text-neutral-900 text-sm font-body font-medium tracking-widest rounded-full hover:shadow-[0_0_28px_rgba(255,255,255,0.3)] hover:opacity-95 transition-all duration-300">
             {tx.bookExperience}
-          </a>
+          </button>
           <Link to="/services" className="flex items-center gap-2 text-white/80 hover:text-white text-sm font-body tracking-wide transition-colors">
             {tx.viewServices} <ArrowRight size={14} />
           </Link>
@@ -126,6 +128,7 @@ function BenefitsSection() {
 function FeaturedServices() {
   const { lang } = useLang();
   const tx = t[lang].home;
+  const { openBookingModal } = useBookingModal();
   const featured = SERVICES.slice(0, 3);
   return (
     <section className="py-28 md:py-40 px-4 bg-background">
@@ -157,10 +160,10 @@ function FeaturedServices() {
                     </li>
                   ))}
                 </ul>
-                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer"
+                <button onClick={openBookingModal}
                   className="text-center py-3.5 bg-foreground text-background text-sm font-body tracking-wider rounded-full hover:shadow-[0_0_18px_rgba(0,0,0,0.2)] hover:opacity-85 transition-all duration-300">
                   {tx.bookNow}
-                </a>
+                </button>
               </div>
             </motion.div>
           ))}

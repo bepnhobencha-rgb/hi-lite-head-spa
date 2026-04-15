@@ -1,8 +1,8 @@
 import React from "react";
-import { BOOKING_URL } from "@/lib/constants";
 import { motion } from "framer-motion";
 import { useLang } from "@/lib/LanguageContext";
 import t from "@/lib/translations";
+import { useBookingModal } from "@/lib/BookingModalContext";
 
 export default function BookingCTA({ headline, subtext, buttonText }) {
   const { lang } = useLang();
@@ -10,6 +10,7 @@ export default function BookingCTA({ headline, subtext, buttonText }) {
   const resolvedHeadline = headline ?? cta.readyHeadline;
   const resolvedSubtext = subtext ?? cta.readySubtext;
   const resolvedButton = buttonText ?? cta.buttonText;
+  const { openBookingModal } = useBookingModal();
   return (
     <section className="py-28 md:py-36 px-4 bg-primary text-primary-foreground text-center">
       <motion.div
@@ -25,14 +26,12 @@ export default function BookingCTA({ headline, subtext, buttonText }) {
         <p className="font-body text-sm text-primary-foreground/70 mb-10 max-w-md mx-auto leading-relaxed">
           {resolvedSubtext}
         </p>
-        <a
-          href={BOOKING_URL}
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          onClick={openBookingModal}
           className="inline-block px-12 py-4 bg-primary-foreground text-primary text-sm font-body font-medium tracking-widest rounded-full hover:shadow-[0_0_24px_rgba(255,255,255,0.25)] hover:opacity-95 transition-all duration-300"
         >
           {resolvedButton}
-        </a>
+        </button>
       </motion.div>
     </section>
   );
