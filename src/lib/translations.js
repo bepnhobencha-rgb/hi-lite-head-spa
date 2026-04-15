@@ -79,6 +79,14 @@ const t = {
       sectionEyebrow: "What Our Guests Say",
       sectionTitle: "Real Experiences",
       sectionSubtitle: "We are honored to be part of our guests' self-care rituals.",
+      items: [
+        { name: "Jessica M.", rating: 5, text: "Absolutely incredible experience! From the moment I walked in, I felt so relaxed. The scalp massage was heavenly, and my hair feels amazing. I will definitely be coming back." },
+        { name: "Sarah L.", rating: 5, text: "This is not your average salon. It is truly a luxury experience. The hot stone therapy combined with the herbal treatment was life-changing. My stress just melted away." },
+        { name: "Emily T.", rating: 5, text: "I got the Royal package and it was worth every penny. The staff was so attentive and professional. I left feeling like a completely new person. Highly recommend!" },
+        { name: "Amanda R.", rating: 5, text: "I brought my mom here for her birthday and she absolutely loved it. The atmosphere is so calming and beautiful. The VVIP treatment is beyond amazing." },
+        { name: "Michelle K.", rating: 5, text: "Best head spa in Anaheim, hands down! The Deluxe package with the foot massage add-on was the perfect way to unwind after a stressful week." },
+        { name: "Tina W.", rating: 5, text: "I have been searching for a proper head spa experience and finally found it here. The Gua Sha treatment was incredibly soothing. My scalp has never felt this clean and healthy." },
+      ],
     },
 
     // Promotions
@@ -89,6 +97,12 @@ const t = {
       sectionTitle: "Exclusive Offers",
       sectionSubtitle: "Take advantage of our special promotions and discover the luxury of HI-LITE HEAD SPA.",
       bookNow: "Book Now",
+      items: [
+        { title: "First Visit Special", description: "Enjoy your first head spa experience at a special introductory rate.", detail: "$105 → $90" },
+        { title: "Check-In Reward", description: "Check in on your visit and receive an exclusive reward.", detail: "10% off" },
+        { title: "Group Royal Package", description: "Bring your friends for the Royal experience and save together.", detail: "$20 off per person" },
+        { title: "Group VVIP Package", description: "Elevate your group experience with the VVIP ritual.", detail: "$25 off per person" },
+      ],
     },
 
     // Gallery
@@ -155,6 +169,17 @@ const t = {
       occasionsTitle: "Perfect for Every Occasion",
       occasions: ["Birthdays", "Mother's Day", "Valentine's Day", "Anniversaries", "Corporate Gifts", "Just Because"],
       buyNow: "Buy a Gift Card",
+    },
+
+    // Booking Modal
+    bookingModal: {
+      title: "Before You Book",
+      subtitle: "A few things to know before your visit.",
+      hoursLabel: "Business Hours",
+      afterHoursLabel: "Booking Outside Business Hours?",
+      afterHoursText: "If you'd like to book outside of our regular hours, please call us directly at",
+      afterHoursSuffix: "and we'll do our best to accommodate you.",
+      proceedButton: "Proceed to Book",
     },
 
     // Shared CTAs
@@ -254,6 +279,14 @@ const t = {
       sectionEyebrow: "Lo Que Dicen Nuestros Huéspedes",
       sectionTitle: "Experiencias Reales",
       sectionSubtitle: "Nos honra ser parte del ritual de autocuidado de nuestros huéspedes.",
+      items: [
+        { name: "Jessica M.", rating: 5, text: "¡Una experiencia absolutamente increíble! Desde el momento en que entré, me sentí muy relajada. El masaje de cuero cabelludo fue celestial y mi cabello se siente increíble." },
+        { name: "Sarah L.", rating: 5, text: "Esto no es un salón promedio. Es verdaderamente una experiencia de lujo. La terapia de piedras calientes combinada con el tratamiento herbal fue transformadora. Mi estrés simplemente desapareció." },
+        { name: "Emily T.", rating: 5, text: "Tomé el paquete Royal y valió cada centavo. El personal fue muy atento y profesional. Salí sintiéndome una persona completamente nueva. ¡Lo recomiendo ampliamente!" },
+        { name: "Amanda R.", rating: 5, text: "Traje a mi mamá aquí para su cumpleaños y le encantó absolutamente. El ambiente es muy calmante y hermoso. El tratamiento VVIP es simplemente extraordinario." },
+        { name: "Michelle K.", rating: 5, text: "¡El mejor head spa en Anaheim, sin duda! El paquete Deluxe con el masaje de pies fue la forma perfecta de descansar después de una semana estresante." },
+        { name: "Tina W.", rating: 5, text: "Estuve buscando una experiencia de head spa de verdad y finalmente la encontré aquí. El tratamiento de Gua Sha fue increíblemente relajante. Mi cuero cabelludo nunca se ha sentido tan limpio." },
+      ],
     },
 
     // Promotions
@@ -264,6 +297,12 @@ const t = {
       sectionTitle: "Ofertas Exclusivas",
       sectionSubtitle: "Aprovecha nuestras promociones especiales y descubre el lujo de HI-LITE HEAD SPA.",
       bookNow: "Reservar",
+      items: [
+        { title: "Especial Primera Visita", description: "Disfruta tu primera experiencia de head spa a una tarifa introductoria especial.", detail: "$105 → $90" },
+        { title: "Recompensa de Check-In", description: "Haz check-in en tu visita y recibe una recompensa exclusiva.", detail: "10% de descuento" },
+        { title: "Paquete Grupal Royal", description: "Trae a tus amigos para la experiencia Royal y ahorren juntos.", detail: "$20 de descuento por persona" },
+        { title: "Paquete Grupal VVIP", description: "Eleva la experiencia grupal con el ritual VVIP.", detail: "$25 de descuento por persona" },
+      ],
     },
 
     // Gallery
@@ -332,6 +371,17 @@ const t = {
       buyNow: "Comprar Tarjeta de Regalo",
     },
 
+    // Booking Modal
+    bookingModal: {
+      title: "Antes de Reservar",
+      subtitle: "Algunas cosas que debes saber antes de tu visita.",
+      hoursLabel: "Horario de Atención",
+      afterHoursLabel: "¿Reservar Fuera del Horario?",
+      afterHoursText: "Si deseas reservar fuera de nuestro horario regular, llámanos directamente al",
+      afterHoursSuffix: "y haremos lo posible por atenderte.",
+      proceedButton: "Continuar y Reservar",
+    },
+
     // Shared CTAs
     cta: {
       readyHeadline: "¿Listo para Tu Reset?",
@@ -346,6 +396,206 @@ const t = {
       questionsHeadline: "¿Aún Tienes Preguntas?",
       questionsSubtext: "Contáctanos o reserva una sesión. Estamos felices de ayudarte.",
       questionsButton: "Contáctanos",
+    },
+  },
+
+  vi: {
+    // Navbar
+    nav: {
+      home: "Trang Chủ",
+      services: "Dịch Vụ",
+      promotions: "Khuyến Mãi",
+      gallery: "Hình Ảnh",
+      about: "Giới Thiệu",
+      reviews: "Đánh Giá",
+      faq: "Câu Hỏi",
+      contact: "Liên Hệ",
+      giftCards: "Thẻ Quà Tặng",
+      bookNow: "Đặt Lịch",
+    },
+
+    // Home
+    home: {
+      tagline: "Không Gian Thư Giãn Của Bạn",
+      heroTitle1: "Tái Tạo Tinh Thần.",
+      heroTitle2: "Phục Hồi Da Đầu.",
+      heroSubtitle: "Trải nghiệm spa đầu cao cấp giúp xua tan căng thẳng, thanh lọc da đầu và phục hồi năng lượng cho bạn.",
+      bookExperience: "Đặt Lịch Ngay",
+      viewServices: "Xem Dịch Vụ",
+      disneylandNote: "Tọa lạc chỉ cách Disneyland 10 phút, Hi-Lite Head Spa Anaheim là nơi lý tưởng để thư giãn và nạp lại năng lượng sau một ngày dài đi bộ và vui chơi.",
+      problemEyebrow: "Bạn Có Gặp Phải?",
+      problemTitle: "Khi Cuộc Sống Khiến Bạn Mệt Mỏi",
+      problemSubtitle: "Cuộc sống hiện đại ảnh hưởng đến tâm trí và da đầu của bạn. Bạn có nhận ra điều này?",
+      problems: ["Căng thẳng và mệt mỏi", "Đau đầu và cứng cổ vai", "Da đầu nhờn hoặc bết bẩn", "Tóc xỉn màu và nặng nề"],
+      benefitsEyebrow: "Liệu Trình",
+      benefitsTitle1: "Những Gì Spa Đầu",
+      benefitsTitle2: "Mang Lại",
+      benefits: ["Giảm căng thẳng tức thì", "Thanh lọc da đầu", "Cải thiện tuần hoàn máu", "Tóc khỏe mạnh hơn", "Tái tạo tinh thần"],
+      servicesEyebrow: "Liệu Trình Của Chúng Tôi",
+      servicesTitle: "Trải Nghiệm Đặc Trưng",
+      servicesSubtitle: "Mỗi buổi trị liệu là một hành trình được thiết kế tỉ mỉ cho tâm trí và da đầu của bạn.",
+      viewAll: "Xem Tất Cả Dịch Vụ",
+      bookNow: "Đặt Lịch",
+    },
+
+    // Services
+    services: {
+      eyebrow: "Thực Đơn Dịch Vụ",
+      heroTitle: "Dịch Vụ",
+      sectionEyebrow: "Liệu Trình Đặc Trưng",
+      sectionTitle: "Trải Nghiệm Spa Đầu",
+      sectionSubtitle: "Từ thanh lọc da đầu chuyên sâu đến các nghi lễ thư giãn toàn diện, mỗi buổi trị liệu đều được thiết kế để khôi phục sự cân bằng.",
+      duration: "phút",
+      bookNow: "Đặt Lịch Dịch Vụ Này",
+      addonsEyebrow: "Nâng Cao Trải Nghiệm",
+      addonsTitle: "Dịch Vụ Bổ Sung",
+      addonsSubtitle: "Tùy chỉnh trải nghiệm của bạn với các dịch vụ bổ sung tùy chọn của chúng tôi.",
+    },
+
+    // About
+    about: {
+      eyebrow: "Câu Chuyện Của Chúng Tôi",
+      heroTitle: "Giới Thiệu",
+      philosophyEyebrow: "Triết Lý Của Chúng Tôi",
+      philosophyTitle1: "Hơn Cả Một Salon.",
+      philosophyTitle2: "Một Thánh Đường.",
+      p1: "HI-LITE HEAD SPA được tạo ra với một tầm nhìn duy nhất: cung cấp không gian để bạn thực sự buông bỏ. Đây không phải là một salon thông thường — đây là trải nghiệm cao cấp tập trung vào giảm căng thẳng, thanh lọc da đầu, tái tạo tinh thần và thư giãn sâu.",
+      p2: "Mỗi liệu trình chúng tôi cung cấp được thiết kế cẩn thận để xoa dịu tâm trí và phục hồi cơ thể. Ngay từ khoảnh khắc bước vào cửa, bạn sẽ được bao bọc trong hơi ấm, sự thoải mái và quan tâm chăm sóc.",
+      p3: "Tọa lạc tại trung tâm Anaheim, spa của chúng tôi kết hợp các kỹ thuật hiện đại với truyền thống lâu đời để mang lại trải nghiệm độc đáo. Chúng tôi sử dụng sản phẩm cao cấp, chăm sóc cá nhân hóa và phương pháp nhẹ nhàng, không vội vã, tôn trọng nhu cầu nghỉ ngơi của bạn.",
+      p4: "Tọa lạc chỉ cách Disneyland 10 phút, Hi-Lite Head Spa Anaheim là nơi lý tưởng để thư giãn và nạp lại năng lượng sau một ngày dài.",
+      valuesEyebrow: "Điều Chúng Tôi Tin",
+      valuesTitle: "Giá Trị Cốt Lõi",
+      values: [
+        { title: "Bình Yên", text: "Chúng tôi tạo ra môi trường hoàn toàn thanh thản, nơi mọi chi tiết đều hỗ trợ sự thư giãn của bạn." },
+        { title: "Quan Tâm", text: "Mỗi liệu trình đều được cá nhân hóa. Chúng tôi lắng nghe nhu cầu của bạn và điều chỉnh từng buổi trị liệu phù hợp với bạn." },
+        { title: "Chất Lượng", text: "Chúng tôi chỉ sử dụng sản phẩm cao cấp và kỹ thuật đã được kiểm chứng để mang lại kết quả xuất sắc." },
+      ],
+    },
+
+    // Reviews
+    reviews: {
+      eyebrow: "Những Lời Khen Ngợi",
+      heroTitle: "Đánh Giá Của Khách Hàng",
+      sectionEyebrow: "Khách Hàng Nói Gì",
+      sectionTitle: "Trải Nghiệm Thực Tế",
+      sectionSubtitle: "Chúng tôi trân trọng được đồng hành cùng nghi lễ chăm sóc bản thân của quý khách.",
+      items: [
+        { name: "Jessica M.", rating: 5, text: "Trải nghiệm tuyệt vời! Ngay từ khi bước vào, tôi đã cảm thấy rất thư giãn. Massage da đầu thực sự tuyệt vời và tóc tôi cảm thấy đáng kinh ngạc. Chắc chắn sẽ quay lại." },
+        { name: "Sarah L.", rating: 5, text: "Đây không phải salon bình thường. Đây thực sự là trải nghiệm cao cấp. Liệu pháp đá nóng kết hợp thảo mộc đã thay đổi cuộc sống của tôi. Căng thẳng tan biến hoàn toàn." },
+        { name: "Emily T.", rating: 5, text: "Tôi chọn gói Royal và xứng đáng từng đồng. Nhân viên rất chu đáo và chuyên nghiệp. Tôi ra về như một người hoàn toàn mới. Rất khuyến khích!" },
+        { name: "Amanda R.", rating: 5, text: "Tôi đưa mẹ đến đây nhân sinh nhật và bà ấy hoàn toàn thích thú. Không gian rất thư thái và đẹp. Liệu trình VVIP thực sự vượt ngoài sức tưởng tượng." },
+        { name: "Michelle K.", rating: 5, text: "Spa đầu tốt nhất Anaheim! Gói Deluxe kèm massage chân là cách hoàn hảo để giải tỏa sau một tuần căng thẳng." },
+        { name: "Tina W.", rating: 5, text: "Tôi đã tìm kiếm một trải nghiệm spa đầu thực sự và cuối cùng đã tìm thấy ở đây. Liệu trình Gua Sha cực kỳ dễ chịu. Da đầu của tôi chưa bao giờ sạch và khỏe như vậy." },
+      ],
+    },
+
+    // Promotions
+    promotions: {
+      eyebrow: "Ưu Đãi Đặc Biệt",
+      heroTitle: "Khuyến Mãi",
+      sectionEyebrow: "Thời Gian Có Hạn",
+      sectionTitle: "Ưu Đãi Độc Quyền",
+      sectionSubtitle: "Tận hưởng các chương trình khuyến mãi đặc biệt và khám phá sự sang trọng của HI-LITE HEAD SPA.",
+      bookNow: "Đặt Lịch",
+      items: [
+        { title: "Ưu Đãi Lần Đầu", description: "Tận hưởng lần đầu trải nghiệm spa đầu với mức giá giới thiệu đặc biệt.", detail: "$105 → $90" },
+        { title: "Phần Thưởng Check-In", description: "Check-in trong lần ghé thăm và nhận phần thưởng độc quyền.", detail: "Giảm 10%" },
+        { title: "Gói Nhóm Royal", description: "Rủ bạn bè cùng trải nghiệm Royal và tiết kiệm cùng nhau.", detail: "Giảm $20/người" },
+        { title: "Gói Nhóm VVIP", description: "Nâng tầm trải nghiệm nhóm với nghi lễ VVIP.", detail: "Giảm $25/người" },
+      ],
+    },
+
+    // Gallery
+    gallery: {
+      eyebrow: "Không Gian Của Chúng Tôi",
+      heroTitle: "Hình Ảnh",
+      heroSubtitle: "Một cái nhìn thoáng qua về thế giới thanh bình của HI-LITE HEAD SPA.",
+    },
+
+    // FAQ
+    faq: {
+      eyebrow: "Hỏi & Đáp",
+      heroTitle: "Câu Hỏi Thường Gặp",
+      sectionEyebrow: "Chúng Tôi Luôn Sẵn Sàng Giúp Đỡ",
+      sectionTitle: "Các Câu Hỏi Phổ Biến",
+      questions: [
+        { q: "Head spa là gì?", a: "Head spa là liệu trình chăm sóc da đầu và tóc cao cấp kết hợp làm sạch sâu, massage và các liệu pháp dưỡng chất. Thúc đẩy thư giãn, giảm căng thẳng, cải thiện sức khỏe da đầu và để tóc bạn cảm thấy được hồi sinh." },
+        { q: "Mỗi buổi kéo dài bao lâu?", a: "Các buổi của chúng tôi từ 60 phút (Hi Lite Classic) đến 110 phút (Hi Lite VVIP). Mỗi dịch vụ được thiết kế để mang lại trải nghiệm đầy đủ, không vội vã." },
+        { q: "Tôi có cần đặt lịch trước không?", a: "Có, chúng tôi khuyến khích đặt lịch trước để đảm bảo thời gian bạn muốn. Bạn có thể đặt lịch dễ dàng tại www.hiliteheadspa.com." },
+        { q: "Tôi nên mong đợi gì trong lần đầu tiên?", a: "Khi đến, bạn sẽ được chào đón vào không gian thanh bình của chúng tôi. Chuyên viên sẽ trao đổi về nhu cầu của bạn và tùy chỉnh liệu trình phù hợp. Chỉ cần thư giãn và tận hưởng." },
+        { q: "Head spa có phù hợp với mọi loại tóc không?", a: "Hoàn toàn có. Các liệu trình của chúng tôi được thiết kế cho mọi loại và kết cấu tóc. Chuyên viên sẽ điều chỉnh sản phẩm và kỹ thuật phù hợp nhất với nhu cầu cá nhân của bạn." },
+        { q: "Lợi ích của việc đến head spa thường xuyên?", a: "Ghé thăm thường xuyên giúp duy trì sức khỏe da đầu, giảm căng thẳng, cải thiện tuần hoàn máu, tăng cường tóc và mang lại sự tái tạo tinh thần nhất quán hỗ trợ sức khỏe tổng thể." },
+        { q: "Có đặt lịch nhóm không?", a: "Có! Chúng tôi có giá đặc biệt cho nhóm với gói Royal và VVIP. Đây là trải nghiệm tuyệt vời để chia sẻ cùng bạn bè, gia đình hoặc đồng nghiệp." },
+        { q: "Bạn dùng sản phẩm gì?", a: "Chúng tôi sử dụng các sản phẩm cao cấp được lựa chọn cẩn thận, nhẹ nhàng với da đầu và hiệu quả trong việc mang lại kết quả. Chuyên viên chọn sản phẩm dựa trên nhu cầu riêng của bạn." },
+        { q: "Có thẻ quà tặng không?", a: "Có, chúng tôi cung cấp thẻ quà tặng cho tất cả dịch vụ. Liên hệ trực tiếp hoặc mua qua hệ thống đặt lịch của chúng tôi. Trải nghiệm head spa là món quà thực sự đặc biệt." },
+        { q: "Bạn ở đâu?", a: "Chúng tôi tọa lạc tại 9832 Katella Ave, Anaheim, CA 92804. Mở cửa Thứ Hai đến Chủ Nhật, 9:00 SA – 7:00 CH." },
+      ],
+    },
+
+    // Contact
+    contact: {
+      eyebrow: "Liên Hệ Với Chúng Tôi",
+      heroTitle: "Liên Hệ",
+      visitEyebrow: "Ghé Thăm Chúng Tôi",
+      visitTitle1: "Chúng Tôi Rất Vui",
+      visitTitle2: "Được Nghe Từ Bạn",
+      labels: { address: "Địa Chỉ", phone: "Điện Thoại", email: "Email", hours: "Giờ Mở Cửa" },
+      bookNow: "Đặt Lịch",
+    },
+
+    // Booking
+    booking: {
+      eyebrow: "Giữ Chỗ Của Bạn",
+      heroTitle: "Đặt Lịch Trải Nghiệm",
+      step1Title: "Chọn Dịch Vụ",
+      step1Desc: "Xem thực đơn của chúng tôi và chọn liệu trình phù hợp với bạn.",
+      step2Title: "Chọn Ngày & Giờ",
+      step2Desc: "Chọn ngày và giờ phù hợp với lịch trình của bạn.",
+      step3Title: "Xác Nhận & Thư Giãn",
+      step3Desc: "Hoàn tất đặt lịch và sẵn sàng cho trải nghiệm tuyệt vời.",
+      bookOnline: "Đặt Lịch Online",
+      assuranceTitle: "Sự Thoải Mái Của Bạn Là Ưu Tiên",
+      assuranceText: "Nếu bạn có câu hỏi trước khi đặt lịch, hãy liên hệ chúng tôi tại",
+    },
+
+    // Gift Cards
+    giftCards: {
+      eyebrow: "Tặng Quà Thư Giãn",
+      heroTitle: "Thẻ Quà Tặng",
+      onlineTitle: "Mua Trực Tuyến",
+      onlineText: "Truy cập trang đặt lịch của chúng tôi để mua thẻ quà tặng cho bất kỳ dịch vụ nào. Cách hoàn hảo để chia sẻ sự sang trọng của HI-LITE HEAD SPA với người thân yêu.",
+      phoneTitle: "Mua Qua Điện Thoại",
+      phoneText: "Thích đặt hàng qua điện thoại? Gọi trực tiếp cho chúng tôi và chúng tôi sẽ giúp bạn chọn thẻ quà tặng hoàn hảo.",
+      occasionsTitle: "Hoàn Hảo Cho Mọi Dịp",
+      occasions: ["Sinh Nhật", "Ngày của Mẹ", "Valentine", "Kỷ Niệm", "Quà Doanh Nghiệp", "Không Cần Lý Do"],
+      buyNow: "Mua Thẻ Quà Tặng",
+    },
+
+    // Booking Modal
+    bookingModal: {
+      title: "Trước Khi Đặt Lịch",
+      subtitle: "Một vài điều cần biết trước khi đến thăm chúng tôi.",
+      hoursLabel: "Giờ Làm Việc",
+      afterHoursLabel: "Đặt Lịch Ngoài Giờ?",
+      afterHoursText: "Nếu bạn muốn đặt lịch ngoài giờ làm việc, vui lòng gọi trực tiếp cho chúng tôi tại",
+      afterHoursSuffix: "và chúng tôi sẽ cố gắng hết sức để phục vụ bạn.",
+      proceedButton: "Tiến Hành Đặt Lịch",
+    },
+
+    // Shared CTAs
+    cta: {
+      readyHeadline: "Sẵn Sàng Tái Tạo?",
+      readySubtext: "Đặt lịch trải nghiệm spa cao cấp và để căng thẳng tan biến.",
+      buttonText: "Đặt Lịch Ngay",
+      unwinding: "Đã Đến Lúc Thư Giãn",
+      unwindingSubtext: "Những ưu đãi này sẽ không kéo dài mãi. Hãy tặng bản thân sự thư giãn xứng đáng.",
+      resetHeadline: "Sẵn Sàng Làm Mới?",
+      resetSubtext: "Thánh đường của bạn đang chờ đợi. Đặt lịch ngay hôm nay.",
+      differenceHeadline: "Cảm Nhận Sự Khác Biệt",
+      differenceSubtext: "Bước vào thánh đường của chúng tôi và khám phá cảm giác thư giãn thực sự.",
+      questionsHeadline: "Còn Câu Hỏi?",
+      questionsSubtext: "Liên hệ chúng tôi hoặc đặt một buổi trị liệu. Chúng tôi luôn sẵn lòng giúp đỡ.",
+      questionsButton: "Liên Hệ",
     },
   },
 };

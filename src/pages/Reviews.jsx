@@ -7,15 +7,6 @@ import BookingCTA from "@/components/shared/BookingCTA";
 import { useLang } from "@/lib/LanguageContext";
 import t from "@/lib/translations";
 
-const reviews = [
-  { name: "Jessica M.", rating: 5, text: "Absolutely incredible experience! From the moment I walked in, I felt so relaxed. The scalp massage was heavenly, and my hair feels amazing. I will definitely be coming back." },
-  { name: "Sarah L.", rating: 5, text: "This is not your average salon. It is truly a luxury experience. The hot stone therapy combined with the herbal treatment was life-changing. My stress just melted away." },
-  { name: "Emily T.", rating: 5, text: "I got the Royal package and it was worth every penny. The staff was so attentive and professional. I left feeling like a completely new person. Highly recommend!" },
-  { name: "Amanda R.", rating: 5, text: "I brought my mom here for her birthday and she absolutely loved it. The atmosphere is so calming and beautiful. The VVIP treatment is beyond amazing." },
-  { name: "Michelle K.", rating: 5, text: "Best head spa in Anaheim, hands down! The Deluxe package with the foot massage add-on was the perfect way to unwind after a stressful week." },
-  { name: "Tina W.", rating: 5, text: "I have been searching for a proper head spa experience and finally found it here. The Gua Sha treatment was incredibly soothing. My scalp has never felt this clean and healthy." },
-];
-
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
   whileInView: { opacity: 1, y: 0 },
@@ -43,7 +34,7 @@ export default function Reviews() {
         <div className="max-w-6xl mx-auto">
           <SectionHeader eyebrow={tx.sectionEyebrow} title={tx.sectionTitle} subtitle={tx.sectionSubtitle} />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {reviews.map((r, i) => (
+            {tx.items.map((r, i) => (
               <motion.div key={i} {...fadeUp} transition={{ ...fadeUp.transition, delay: i * 0.08 }}
                 className="bg-card border border-border rounded-sm p-10 flex flex-col">
                 <div className="flex gap-1 mb-5">

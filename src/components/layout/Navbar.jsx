@@ -11,6 +11,8 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const { lang, toggle } = useLang();
+  const LANG_LABELS = { en: "🇺🇸 EN", es: "🇲🇽 ES", vi: "🇻🇳 VI" };
+  const nextLangLabel = lang === "en" ? "🇲🇽 ES" : lang === "es" ? "🇻🇳 VI" : "🇺🇸 EN";
   const tx = t[lang].nav;
 
   const NAV_LINKS = [
@@ -71,9 +73,8 @@ export default function Navbar() {
             <button
               onClick={toggle}
               className="px-3 py-2 text-sm font-body tracking-wide text-muted-foreground hover:text-foreground transition-colors border border-border rounded-full"
-              title={lang === "en" ? "Cambiar a Español" : "Switch to English"}
             >
-              {lang === "en" ? "🇲🇽 ES" : "🇺🇸 EN"}
+              {LANG_LABELS[lang]}
             </button>
             <a
               href={BOOKING_URL}
@@ -91,7 +92,7 @@ export default function Navbar() {
               onClick={toggle}
               className="px-3 py-1.5 text-xs font-body text-muted-foreground hover:text-foreground border border-border rounded-full transition-colors"
             >
-              {lang === "en" ? "🇲🇽 ES" : "🇺🇸 EN"}
+              {LANG_LABELS[lang]}
             </button>
             <button
               onClick={() => setOpen(!open)}

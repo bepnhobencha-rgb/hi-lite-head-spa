@@ -2,8 +2,13 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Clock, Phone, ArrowRight, CalendarCheck } from "lucide-react";
 import { BUSINESS, BOOKING_URL } from "@/lib/constants";
+import { useLang } from "@/lib/LanguageContext";
+import t from "@/lib/translations";
 
 export default function BookingModal({ isOpen, onClose }) {
+  const { lang } = useLang();
+  const tx = t[lang].bookingModal;
+
   if (!isOpen) return null;
 
   return (
@@ -39,10 +44,10 @@ export default function BookingModal({ isOpen, onClose }) {
             <div className="mb-8 text-center">
               <CalendarCheck size={32} className="mx-auto mb-4 text-gold" strokeWidth={1.5} />
               <h2 className="font-heading text-2xl font-light text-foreground tracking-wide mb-2">
-                Before You Book
+                {tx.title}
               </h2>
               <p className="font-body text-sm text-muted-foreground">
-                A few things to know before your visit.
+                {tx.subtitle}
               </p>
             </div>
 
@@ -50,7 +55,7 @@ export default function BookingModal({ isOpen, onClose }) {
             <div className="flex items-start gap-4 p-5 bg-card border border-border rounded-sm mb-4">
               <Clock size={18} className="text-gold mt-0.5 shrink-0" strokeWidth={1.5} />
               <div>
-                <p className="font-body text-xs tracking-widest uppercase text-muted-foreground mb-1">Business Hours</p>
+                <p className="font-body text-xs tracking-widest uppercase text-muted-foreground mb-1">{tx.hoursLabel}</p>
                 <p className="font-body text-sm text-foreground font-medium">{BUSINESS.hours}</p>
               </div>
             </div>
@@ -59,16 +64,16 @@ export default function BookingModal({ isOpen, onClose }) {
             <div className="flex items-start gap-4 p-5 bg-gold/10 border border-gold/30 rounded-sm mb-8">
               <Phone size={18} className="text-gold mt-0.5 shrink-0" strokeWidth={1.5} />
               <div>
-                <p className="font-body text-xs tracking-widest uppercase text-muted-foreground mb-1">Booking Outside Business Hours?</p>
+                <p className="font-body text-xs tracking-widest uppercase text-muted-foreground mb-1">{tx.afterHoursLabel}</p>
                 <p className="font-body text-sm text-foreground">
-                  If you'd like to book outside of our regular hours, please call us directly at{" "}
+                  {tx.afterHoursText}{" "}
                   <a
                     href={`tel:${BUSINESS.phone}`}
                     className="font-medium text-gold hover:underline"
                   >
                     {BUSINESS.phone}
                   </a>{" "}
-                  and we'll do our best to accommodate you.
+                  {tx.afterHoursSuffix}
                 </p>
               </div>
             </div>
@@ -81,7 +86,7 @@ export default function BookingModal({ isOpen, onClose }) {
               onClick={onClose}
               className="flex items-center justify-center gap-3 w-full py-4 bg-foreground text-background text-sm font-body tracking-widest rounded-full hover:opacity-85 hover:shadow-[0_0_18px_rgba(0,0,0,0.2)] transition-all duration-300"
             >
-              Proceed to Book <ArrowRight size={15} />
+              {tx.proceedButton} <ArrowRight size={15} />
             </a>
           </motion.div>
         </div>

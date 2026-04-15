@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Gift, Users, Star, Sparkles } from "lucide-react";
-import { PROMOTIONS, IMAGES, BOOKING_URL } from "@/lib/constants";
+import { IMAGES, BOOKING_URL } from "@/lib/constants";
 import SectionHeader from "@/components/shared/SectionHeader";
 import BookingCTA from "@/components/shared/BookingCTA";
 import { useLang } from "@/lib/LanguageContext";
@@ -36,7 +36,7 @@ export default function Promotions() {
         <div className="max-w-5xl mx-auto">
           <SectionHeader eyebrow={tx.sectionEyebrow} title={tx.sectionTitle} subtitle={tx.sectionSubtitle} />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {PROMOTIONS.map((promo, i) => {
+            {tx.items.map((promo, i) => {
               const Icon = icons[i];
               return (
                 <motion.div key={i} {...fadeUp} transition={{ ...fadeUp.transition, delay: i * 0.1 }}
