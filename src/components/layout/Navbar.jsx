@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import { BUSINESS, SOCIAL } from "@/lib/constants";
+import { BOOKING_URL, BUSINESS, SOCIAL } from "@/lib/constants";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLang } from "@/lib/LanguageContext";
-import { useBookingModal } from "@/lib/BookingModalContext";
 import t from "@/lib/translations";
 
 export default function Navbar() {
@@ -12,7 +11,6 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const { lang, toggle } = useLang();
-  const { openBookingModal } = useBookingModal();
   const LANG_LABELS = { en: "🇺🇸 EN", es: "🇲🇽 ES", vi: "🇻🇳 VI" };
   const nextLangLabel = lang === "en" ? "🇲🇽 ES" : lang === "es" ? "🇻🇳 VI" : "🇺🇸 EN";
   const tx = t[lang].nav;
@@ -78,13 +76,14 @@ export default function Navbar() {
             >
               {LANG_LABELS[lang]}
             </button>
-            <button
-              type="button"
-              onClick={openBookingModal}
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="ml-4 px-7 py-2.5 bg-foreground text-background text-sm font-body font-medium tracking-wider rounded-full hover:shadow-[0_0_16px_rgba(0,0,0,0.2)] hover:opacity-85 transition-all duration-300"
             >
               {tx.bookNow}
-            </button>
+            </a>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -130,16 +129,14 @@ export default function Navbar() {
                 </Link>
               ))}
 
-              <button
-                type="button"
-                onClick={() => {
-                  setOpen(false);
-                  openBookingModal();
-                }}
+              <a
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-4 w-full py-3.5 bg-foreground text-background text-center text-sm font-body font-medium tracking-wider rounded-full hover:opacity-85 transition-all duration-300"
               >
                 {tx.bookNow}
-              </button>
+              </a>
             </nav>
           </motion.div>
         )}
