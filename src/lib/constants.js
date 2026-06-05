@@ -1,11 +1,11 @@
 export const IMAGES = {
-  hero: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/28df4d375_generated_image.png",
-  treatment1: "https://media.base44.com/images/public/user_6946325409b1232840422c0d/a0d703ae9_IMG_4111-ThiNguyen.jpg",
-  treatment2: "https://media.base44.com/images/public/user_6946325409b1232840422c0d/4fe6da2a3_IMG_4177-ThiNguyen.jpeg",
-  massage: "https://media.base44.com/images/public/user_6946325409b1232840422c0d/71d11e578_IMG_4179-ThiNguyen.jpg",
-  scalp: "https://media.base44.com/images/public/user_6946325409b1232840422c0d/4ea593ac4_IMG_4180-ThiNguyen.jpeg",
-  facial: "https://media.base44.com/images/public/user_6946325409b1232840422c0d/d827ba2f1_IMG_4181-ThiNguyen.jpeg",
-  interior: "https://media.base44.com/images/public/user_6946325409b1232840422c0d/dfd3f2bb1_IMG_4589-ThiNguyen.jpg",
+  hero: "/images/28df4d375_generated_image.png",
+  treatment1: "/images/a0d703ae9_IMG_4111-ThiNguyen.jpg",
+  treatment2: "/images/4fe6da2a3_IMG_4177-ThiNguyen.jpeg",
+  massage: "/images/71d11e578_IMG_4179-ThiNguyen.jpg",
+  scalp: "/images/4ea593ac4_IMG_4180-ThiNguyen.jpeg",
+  facial: "/images/d827ba2f1_IMG_4181-ThiNguyen.jpeg",
+  interior: "/images/dfd3f2bb1_IMG_4589-ThiNguyen.jpg",
 };
 
 export const SOCIAL = {
@@ -13,7 +13,7 @@ export const SOCIAL = {
   tiktok: "https://www.tiktok.com/@scalpmassageoc",
 };
 
-export const BOOKING_URL = "https://app.squareup.com/appointments/book/ziaxhgo8sj2etm/LKNG1X7QRRQ4M/start";
+export const BOOKING_URL = "https://nailiq.ca/hilite-anaheim";
 
 export const BUSINESS = {
   name: "HI-LITE HEAD SPA",
@@ -30,7 +30,7 @@ export const SERVICES = [
     name: "Hi Lite VVIP",
     duration: "110 mins",
     price: 195,
-    image: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/e4f56a61a_generated_image.png",
+    image: "/images/e4f56a61a_generated_image.png",
     features: [
       "Full VIP scalp relaxation ritual",
       "Extended herbal & hot stone therapy",
@@ -44,7 +44,7 @@ export const SERVICES = [
     name: "Hi Lite Royal",
     duration: "90 mins",
     price: 155,
-    image: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/e38eca5d5_generated_image.png",
+    image: "/images/e38eca5d5_generated_image.png",
     features: [
       "Full scalp massage",
       "Herbal & hot stone",
@@ -58,7 +58,7 @@ export const SERVICES = [
     name: "Hi Lite Deluxe",
     duration: "80 mins",
     price: 125,
-    image: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/ef1e66637_generated_image.png",
+    image: "/images/ef1e66637_generated_image.png",
     features: [
       "Full scalp massage",
       "Hot oil treatment",
@@ -72,7 +72,7 @@ export const SERVICES = [
     name: "Hi Lite Special",
     duration: "70 mins",
     price: 105,
-    image: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/2ae5e865b_generated_image.png",
+    image: "/images/2ae5e865b_generated_image.png",
     features: [
       "Scalp massage",
       "Neck, shoulder, arms",
@@ -86,7 +86,7 @@ export const SERVICES = [
     name: "Hi Lite Classic",
     duration: "60 mins",
     price: 85,
-    image: "https://media.base44.com/images/public/69ca33f058b56f86689a61f3/79ac4318e_generated_image.png",
+    image: "/images/79ac4318e_generated_image.png",
     features: [
       "Scalp massage",
       "Neck & shoulder",
