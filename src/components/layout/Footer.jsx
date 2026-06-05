@@ -1,14 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
-import { BUSINESS, SOCIAL } from "@/lib/constants";
+import { BUSINESS, BOOKING_URL, SOCIAL } from "@/lib/constants";
 import { useLang } from "@/lib/LanguageContext";
-import { useBookingModal } from "@/lib/BookingModalContext";
 import t from "@/lib/translations";
 
 export default function Footer() {
   const { lang } = useLang();
-  const { openBookingModal } = useBookingModal();
   const tx = t[lang].nav;
   const cta = t[lang].cta;
 
@@ -99,10 +97,10 @@ export default function Footer() {
                 TikTok
               </a>
             </div>
-            <button type="button" onClick={openBookingModal}
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer"
               className="inline-block px-8 py-3.5 bg-primary-foreground text-primary text-sm font-body font-medium tracking-wider rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:opacity-95 transition-all duration-300">
               {tx.bookNow}
-            </button>
+            </a>
           </div>
         </div>
 
