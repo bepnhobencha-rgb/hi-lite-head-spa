@@ -1,10 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Gift, Users, Star, Sparkles } from "lucide-react";
-import { IMAGES, BOOKING_URL } from "@/lib/constants";
+import { IMAGES } from "@/lib/constants";
 import SectionHeader from "@/components/shared/SectionHeader";
 import BookingCTA from "@/components/shared/BookingCTA";
 import { useLang } from "@/lib/LanguageContext";
+import { useBookingModal } from "@/lib/BookingModalContext";
 import t from "@/lib/translations";
 
 const icons = [Star, Sparkles, Users, Gift];
@@ -18,6 +19,7 @@ const fadeUp = {
 
 export default function Promotions() {
   const { lang } = useLang();
+  const { openBookingModal } = useBookingModal();
   const tx = t[lang].promotions;
   const cta = t[lang].cta;
 
@@ -46,10 +48,10 @@ export default function Promotions() {
                   <p className="font-body text-sm text-muted-foreground leading-relaxed mb-8 flex-1">{promo.description}</p>
                   <div className="flex items-center justify-between">
                     <span className="font-heading text-2xl font-light text-gold">{promo.detail}</span>
-                    <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer"
+                    <button type="button" onClick={openBookingModal}
                       className="px-8 py-3 bg-foreground text-background text-xs font-body tracking-wider rounded-full hover:shadow-[0_0_16px_rgba(0,0,0,0.2)] hover:opacity-85 transition-all duration-300">
                       {tx.bookNow}
-                    </a>
+                    </button>
                   </div>
                 </motion.div>
               );
