@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-inter: 'Inter', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-inter);
+  background-color: #F7F2E8;
+  color: #0D0D0D;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-hl-gold px-7 py-3 text-sm font-semibold text-hl-black tracking-wide transition-all duration-200 hover:bg-hl-gold-light hover:shadow-lg active:scale-95;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/40 px-7 py-3 text-sm font-medium text-white tracking-wide transition-all duration-200 hover:border-white/80 hover:bg-white/10 active:scale-95;
+  }
+
+  .btn-outline-dark {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-hl-gold/60 px-7 py-3 text-sm font-medium text-hl-gold tracking-wide transition-all duration-200 hover:border-hl-gold hover:bg-hl-gold/10 active:scale-95;
+  }
+
+  .section-title {
+    @apply font-serif text-3xl font-semibold text-hl-black md:text-4xl lg:text-5xl;
+  }
+
+  .section-sub {
+    @apply text-base text-hl-muted md:text-lg;
+  }
+}
