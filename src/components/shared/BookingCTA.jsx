@@ -1,0 +1,38 @@
+import React from "react";
+import { motion } from "framer-motion";
+import { useLang } from "@/lib/LanguageContext";
+import t from "@/lib/translations";
+import { useBookingModal } from "@/lib/BookingModalContext";
+
+export default function BookingCTA({ headline, subtext, buttonText }) {
+  const { lang } = useLang();
+  const cta = t[lang].cta;
+  const resolvedHeadline = headline ?? cta.readyHeadline;
+  const resolvedSubtext = subtext ?? cta.readySubtext;
+  const resolvedButton = buttonText ?? cta.buttonText;
+  const { openBookingModal } = useBookingModal();
+  return (
+    <section className="py-28 md:py-36 px-4 bg-primary text-primary-foreground text-center">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="max-w-2xl mx-auto"
+      >
+        <h2 className="font-heading text-3xl md:text-5xl font-light tracking-wide mb-6">
+          {resolvedHeadline}
+        </h2>
+        <p className="font-body text-sm text-primary-foreground/70 mb-10 max-w-md mx-auto leading-relaxed">
+          {resolvedSubtext}
+        </p>
+        <button
+          onClick={openBookingModal}
+          className="inline-block px-12 py-4 bg-primary-foreground text-primary text-sm font-body font-medium tracking-widest rounded-full hover:shadow-[0_0_24px_rgba(255,255,255,0.25)] hover:opacity-95 transition-all duration-300"
+        >
+          {resolvedButton}
+        </button>
+      </motion.div>
+    </section>
+  );
+}
