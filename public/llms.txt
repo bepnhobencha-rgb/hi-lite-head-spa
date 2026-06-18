@@ -1,0 +1,51 @@
+# Hi-Lite Head Spa — llms.txt
+# https://www.hiliteheadspa.com
+
+> Hi-Lite Head Spa is a luxury head spa in Anaheim, CA specializing in scalp detox, deep tissue massage, steam therapy, and full-body relaxation rituals.
+
+## Business
+
+- Name: Hi-Lite Head Spa
+- Type: Luxury head spa / scalp treatment salon
+- Location: 9832 Katella Ave, Anaheim, CA 92804 (10 min from Disneyland, free parking)
+- Hours: Monday – Sunday, 9:00 AM – 7:00 PM
+- Phone: 714-537-1075
+- Email: thinguyenllc2022@gmail.com
+- Booking: https://www.nailiq.ca/hilite-anaheim
+
+## Services
+
+- Hi-Lite VVIP — 110 min · $195 — Full scalp detox, deep tissue massage, hot oil, LED mask therapy, full-body relaxation
+- Hi-Lite Royal — 90 min · $155 — Signature scalp massage, detox treatment, steam therapy, shoulder decompression (Most Popular)
+- Hi-Lite Deluxe — 80 min · $125 — Scalp treatment, deep massage, targeted tension relief
+- Hi-Lite Special — 70 min · $105 — Focused scalp care and stress relief
+- Hi-Lite Classic — 60 min · $85 — Introductory scalp massage, cleanse, and pressure-point release
+
+## Add-ons
+
+Eye Mask ($5), Back/Arm/Facial/Foot/Neck Massage ($20), Scalp Exfoliation ($20), Hot Oil Treatment ($20), LED Mask Therapy ($20), Hot Stone ($10), Premium Upgrade ($10)
+
+## Promotions
+
+- First Visit Special: Hi-Lite Special at $90 (was $105) for new guests
+- Check-In Reward: 10% off when you check in on social media
+- Group Royal Package: $20 off per person for groups
+- Group VVIP Package: $25 off per person for groups
+
+## Pages
+
+- / — Home and booking CTA
+- /services — Full service menu with pricing and descriptions
+- /promotions — Current deals and group packages
+- /gallery — Photo gallery of treatments and space
+- /reviews — Verified customer reviews
+- /faq — Frequently asked questions about head spa
+- /gift-cards — Gift card purchase (any denomination)
+- /contact — Location map, hours, contact form
+- /about — Story and team
+
+## Social
+
+- Instagram: https://www.instagram.com/scalpmassageoc
+- TikTok: https://www.tiktok.com/@scalpmassageoc
+- Facebook: https://www.facebook.com/HiLiteHairSalon
