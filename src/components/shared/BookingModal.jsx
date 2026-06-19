@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { X, Clock, Phone, ArrowRight, CalendarCheck } from "lucide-react";
 import { BUSINESS, EMBED_URL } from "@/lib/constants";
@@ -10,15 +10,41 @@ const GOLD_DARK = "#b8842e";
 const GOLD_RGB = "215,160,66";
 const GOLD_GRADIENT = `linear-gradient(135deg, ${GOLD}, ${GOLD_DARK})`;
 
+// Two-step modal: (1) Hi-Lite notice + Continue → (2) NailIQ booking embedded.
+// The iframe auto-sizes to its content via the embed's `nailiq-embed:resize`
+// postMessage, so there's no leftover dark area. Portal to <body> + solid render
+// keeps it above the hero.
 export default function BookingModal({ isOpen, onClose }) {
   const { lang } = useLang();
   const tx = t[lang].bookingModal;
   const notNow = lang === "es" ? "Ahora no" : "Not now";
   const [step, setStep] = useState("notice");
+  const [frameHeight, setFrameHeight] = useState(460);
 
   useEffect(() => {
-    if (isOpen) setStep("notice");
+    if (isOpen) {
+      setStep("notice");
+      setFrameHeight(460);
+    }
   }, [isOpen]);
+
+  // Auto-size the embedded booking iframe to its content height.
+  useEffect(() => {
+    function onMessage(e) {
+      const d = e && e.data;
+      if (
+        d &&
+        d.source === "nailiq-embed" &&
+        d.type === "resize" &&
+        typeof d.height === "number" &&
+        d.height > 0
+      ) {
+        setFrameHeight(d.height);
+      }
+    }
+    window.addEventListener("message", onMessage);
+    return () => window.removeEventListener("message", onMessage);
+  }, []);
 
   if (!isOpen) return null;
   if (typeof document === "undefined") return null;
@@ -114,13 +140,15 @@ export default function BookingModal({ isOpen, onClose }) {
                 <X size={20} />
               </button>
             </div>
-            <iframe
-              src={embedSrc}
-              title="Book your appointment"
-              className="w-full grow"
-              style={{ border: 0, minHeight: "60vh" }}
-              allow="clipboard-write; payment"
-            />
+            <div className="overflow-y-auto" style={{ flex: 1, minHeight: 0 }}>
+              <iframe
+                src={embedSrc}
+                title="Book your appointment"
+                className="w-full block"
+                style={{ border: 0, height: frameHeight + "px" }}
+                allow="clipboard-write; payment"
+              />
+            </div>
           </>
         )}
       </div>
