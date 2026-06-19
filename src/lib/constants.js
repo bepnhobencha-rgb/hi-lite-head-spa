@@ -128,3 +128,4 @@ export const PROMOTIONS = [
     detail: "$25 off per person",
   },
 ];
+export const EMBED_URL = "https://www.nailiq.ca/embed/hilite-anaheim";
