@@ -1,4 +1,5 @@
 import React from "react";
+import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import { EMBED_URL } from "@/lib/constants";
@@ -14,10 +15,11 @@ export default function BookingModal({ isOpen, onClose }) {
   const tx = t[lang].bookingModal;
 
   if (!isOpen) return null;
+  if (typeof document === "undefined") return null;
 
   const embedSrc = `${EMBED_URL}?lang=en`;
 
-  return (
+  return createPortal(
     <AnimatePresence>
       {isOpen && (
         <>
@@ -26,14 +28,16 @@ export default function BookingModal({ isOpen, onClose }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm"
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm"
+            style={{ zIndex: 9998 }}
           />
           <motion.div
             initial={{ opacity: 0, scale: 0.96, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.96, y: 20 }}
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-0 z-50 flex items-center justify-center px-3 py-6 sm:px-4"
+            className="fixed inset-0 flex items-center justify-center px-3 py-6 sm:px-4"
+            style={{ zIndex: 9999 }}
             onClick={(e) => e.stopPropagation()}
           >
             <div
@@ -64,6 +68,7 @@ export default function BookingModal({ isOpen, onClose }) {
           </motion.div>
         </>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body,
   );
 }
