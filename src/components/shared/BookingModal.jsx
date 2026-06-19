@@ -10,14 +10,14 @@ const GOLD_DARK = "#b8842e";
 const GOLD_RGB = "215,160,66";
 const GOLD_GRADIENT = `linear-gradient(135deg, ${GOLD}, ${GOLD_DARK})`;
 
-// Two-step modal: (1) Hi-Lite notice + Continue → (2) NailIQ booking embedded.
-// The iframe auto-sizes to its content via the embed's `nailiq-embed:resize`
-// postMessage, so there's no leftover dark area. Portal to <body> + solid render
-// keeps it above the hero.
+// Two-step modal: (1) "Before You Book" notice + Continue → (2) "Book Your
+// Appointment" with the NailIQ booking embedded (auto-sized to content, portal
+// to <body>, solid render).
 export default function BookingModal({ isOpen, onClose }) {
   const { lang } = useLang();
   const tx = t[lang].bookingModal;
   const notNow = lang === "es" ? "Ahora no" : "Not now";
+  const bookingTitle = lang === "es" ? "Reservar Cita" : "Book Your Appointment";
   const [step, setStep] = useState("notice");
   const [frameHeight, setFrameHeight] = useState(460);
 
@@ -28,7 +28,6 @@ export default function BookingModal({ isOpen, onClose }) {
     }
   }, [isOpen]);
 
-  // Auto-size the embedded booking iframe to its content height.
   useEffect(() => {
     function onMessage(e) {
       const d = e && e.data;
@@ -53,12 +52,13 @@ export default function BookingModal({ isOpen, onClose }) {
 
   return createPortal(
     <div
-      className="fixed inset-0 overflow-y-auto flex items-start sm:items-center justify-center px-3 py-6 sm:px-4"
+      className="fixed inset-0 flex items-center justify-center px-3 py-6 sm:px-4"
       style={{ zIndex: 9999 }}
     >
-      <div onClick={onClose} className="fixed inset-0 bg-black/60 backdrop-blur-sm" style={{ zIndex: -1 }} />
+      <div onClick={onClose} className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
       <div
-        className="relative bg-white rounded-3xl shadow-2xl w-full max-w-xl overflow-hidden"
+        className="relative bg-white rounded-3xl shadow-2xl w-full max-w-xl overflow-hidden flex flex-col"
+        style={{ maxHeight: "92vh" }}
       >
         <div className="h-1 w-full shrink-0" style={{ background: GOLD_GRADIENT }} />
 
@@ -129,7 +129,7 @@ export default function BookingModal({ isOpen, onClose }) {
           <>
             <div className="flex items-center justify-between px-5 py-3 shrink-0 border-b border-[#ede8e0]">
               <h2 className="font-heading text-lg font-light text-foreground tracking-wide">
-                {tx.title}
+                {bookingTitle}
               </h2>
               <button
                 onClick={onClose}
@@ -139,15 +139,15 @@ export default function BookingModal({ isOpen, onClose }) {
                 <X size={20} />
               </button>
             </div>
-            {/* No flex:1 wrapper — iframe drives its own height via resize message.
-                Outer portal container scrolls if modal card exceeds 92vh. */}
-            <iframe
-              src={embedSrc}
-              title="Book your appointment"
-              className="w-full block"
-              style={{ border: 0, height: frameHeight + "px" }}
-              allow="clipboard-write; payment"
-            />
+            <div className="overflow-y-auto" style={{ flex: 1, minHeight: 0 }}>
+              <iframe
+                src={embedSrc}
+                title="Book your appointment"
+                className="w-full block"
+                style={{ border: 0, height: frameHeight + "px" }}
+                allow="clipboard-write; payment"
+              />
+            </div>
           </>
         )}
       </div>
