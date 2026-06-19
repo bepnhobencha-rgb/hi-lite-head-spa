@@ -13,7 +13,7 @@ export const SOCIAL = {
   tiktok: "https://www.tiktok.com/@scalpmassageoc",
 };
 
-export const BOOKING_URL = "https://app.squareup.com/appointments/book/ziaxhgo8sj2etm/LKNG1X7QRRQ4M/start";
+export const BOOKING_URL = "https://www.nailiq.ca/hilite-anaheim";
 
 export const BUSINESS = {
   name: "HI-LITE HEAD SPA",
