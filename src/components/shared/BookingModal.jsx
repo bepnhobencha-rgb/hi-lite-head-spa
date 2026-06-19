@@ -53,13 +53,12 @@ export default function BookingModal({ isOpen, onClose }) {
 
   return createPortal(
     <div
-      className="fixed inset-0 flex items-center justify-center px-3 py-6 sm:px-4"
+      className="fixed inset-0 overflow-y-auto flex items-start sm:items-center justify-center px-3 py-6 sm:px-4"
       style={{ zIndex: 9999 }}
     >
-      <div onClick={onClose} className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+      <div onClick={onClose} className="fixed inset-0 bg-black/60 backdrop-blur-sm" style={{ zIndex: -1 }} />
       <div
-        className="relative bg-white rounded-3xl shadow-2xl w-full max-w-xl overflow-hidden flex flex-col"
-        style={{ maxHeight: "92vh" }}
+        className="relative bg-white rounded-3xl shadow-2xl w-full max-w-xl overflow-hidden"
       >
         <div className="h-1 w-full shrink-0" style={{ background: GOLD_GRADIENT }} />
 
@@ -140,15 +139,15 @@ export default function BookingModal({ isOpen, onClose }) {
                 <X size={20} />
               </button>
             </div>
-            <div className="overflow-y-auto" style={{ flex: 1, minHeight: 0 }}>
-              <iframe
-                src={embedSrc}
-                title="Book your appointment"
-                className="w-full block"
-                style={{ border: 0, height: frameHeight + "px" }}
-                allow="clipboard-write; payment"
-              />
-            </div>
+            {/* No flex:1 wrapper — iframe drives its own height via resize message.
+                Outer portal container scrolls if modal card exceeds 92vh. */}
+            <iframe
+              src={embedSrc}
+              title="Book your appointment"
+              className="w-full block"
+              style={{ border: 0, height: frameHeight + "px" }}
+              allow="clipboard-write; payment"
+            />
           </>
         )}
       </div>
