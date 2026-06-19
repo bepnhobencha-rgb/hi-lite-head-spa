@@ -18,6 +18,7 @@ export default function BookingModal({ isOpen, onClose }) {
   const { lang } = useLang();
   const tx = t[lang].bookingModal;
   const notNow = lang === "es" ? "Ahora no" : "Not now";
+  const bookingTitle = lang === "es" ? "Reservar Cita" : "Book Your Appointment";
   const [step, setStep] = useState("notice");
   const [frameHeight, setFrameHeight] = useState(460);
 
@@ -129,7 +130,7 @@ export default function BookingModal({ isOpen, onClose }) {
           <>
             <div className="flex items-center justify-between px-5 py-3 shrink-0 border-b border-[#ede8e0]">
               <h2 className="font-heading text-lg font-light text-foreground tracking-wide">
-                {tx.title}
+                {bookingTitle}
               </h2>
               <button
                 onClick={onClose}
